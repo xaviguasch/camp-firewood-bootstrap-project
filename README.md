@@ -1,0 +1,1 @@
+# camp-firewood-bootstrap-project
