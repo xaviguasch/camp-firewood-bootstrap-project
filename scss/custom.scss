@@ -5,6 +5,11 @@ body {
 
 .navbar {
   font-weight: 100;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
 
   .navbar-brand h3 {
     font-weight: 100;
@@ -23,6 +28,21 @@ body {
 #showcase {
   background: url('../images/main.jpeg') bottom center / cover no-repeat;
   min-height: 750px;
+  position: relative;
+
+  #header {
+    z-index: 2;
+  }
+
+  #overlay {
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
 
   h1 {
     font-family: 'Questrial', sans-serif;
