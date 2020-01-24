@@ -31,19 +31,21 @@
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a href="#" class="nav-link">Home</a>
+            <a href="#showcase" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">About</a>
+            <a href="#icons" class="nav-link">About</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Explore</a>
+            <a href="#explore" class="nav-link">Explore</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Contact</a>
+            <a href="#newsletter" class="nav-link">Contact</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Book</a>
+            <a href="#" class="nav-link" data-toggle="modal" data-target="#bookingModal"
+              >Book</a
+            >
           </li>
         </ul>
       </div>
@@ -57,12 +59,19 @@
         <p class="lead d-none d-md-block">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, aut.
         </p>
-        <button id="book" class="btn btn-primary btn-lg px-5">BOOK NOW</button>
+        <button
+          id="book"
+          class="btn btn-primary btn-lg px-5"
+          data-toggle="modal"
+          data-target="#bookingModal"
+        >
+          BOOK NOW
+        </button>
       </div>
     </section>
 
     <section>
-      <div class="container text-center mt-5">
+      <div id="icons" class="container text-center mt-5">
         <h2>YOU SHOW UP, WE PITCH THE TENT.</h2>
         <div class="row d-flex justify-content-center bg-white">
           <div class="col-md-4 p-3">
@@ -106,7 +115,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="explore">
       <div class="container text-center mt-2 p-3">
         <h3>WE CREATED A CAMPING EXPERIENCE THAT'S TURN-KEY AND HASSLE FREE</h3>
 
@@ -299,22 +308,83 @@
     <section id="footer" class="p-3 bg-secondary">
       <ul class="nav text-center justify-content-center flex-column flex-sm-row">
         <li class="nav-item">
-          <a href="" class="nav-link text-white">FAQ</a>
+          <a href="#" class="nav-link text-white">FAQ</a>
         </li>
         <li class="nav-item">
-          <a href="" class="nav-link text-white">EXPERIENCE</a>
+          <a href="#explore" class="nav-link text-white">EXPERIENCE</a>
         </li>
         <li class="nav-item">
-          <a href="" class="nav-link text-white">EXPLORE</a>
+          <a href="#explore" class="nav-link text-white">EXPLORE</a>
         </li>
         <li class="nav-item">
-          <a href="" class="nav-link text-white">CONTACT</a>
+          <a href="#newsletter" class="nav-link text-white">CONTACT</a>
         </li>
         <li class="nav-item">
-          <a href="" class="nav-link text-white">BOOK NOW</a>
+          <a
+            href=""
+            class="nav-link text-white"
+            data-toggle="modal"
+            data-target="#bookingModal"
+            >BOOK NOW</a
+          >
         </li>
       </ul>
     </section>
+
+    <div class="modal" id="bookingModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">New Booking</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Please fill out the form below and we'll get back to you as soon as possible
+            </p>
+            <form>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="name@example.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="adults">Number of Adults</label>
+                <select class="form-control" id="adults">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="children">Number of Children</label>
+                <select class="form-control" id="children">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="requests">Additional Requests</label>
+                <textarea id="requests" rows="3" class="form-control"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary">Submit Request</button>
+            <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
